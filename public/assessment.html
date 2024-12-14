@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Leafting</title>
+    <meta name="description" content="Crowdfunding platform for sustainable real estate.">
+    <meta name="keywords" content="Crowdfunding, Real Estate, Sustainable Development">
+
+    
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="assessment-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="./assets/logo.png" alt="Leafting Logo" class="img-fluid">
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./crowdfunding.html">Crowdfunding</a></li>
+                    <li><a href="./investment.html">Investment</a></li>
+                    <li><a href="./assessment.html" class="active">Assessment</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="#about">Get Started</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="intro" class="intro section">
+            <div class="container">
+                <h1>Comprehensive Project and ESG Assessment</h1>
+                <p>Evaluate projects based on environmental, social, and governance criteria to ensure alignment with sustainable development goals.</p>
+            </div>
+        </section>
+
+        <section id="project-assessment" class="project-assessment section">
+            <div class="container">
+                <h3>Project Assessment</h3>
+                <form id="assessment-form">
+                    <div class="mb-3">
+                        <label for="projectName" class="form-label">Project Name</label>
+                        <input type="text" class="form-control" id="projectName" placeholder="Enter the project name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="projectDescription" class="form-label">Project Description</label>
+                        <textarea class="form-control" id="projectDescription" rows="3" placeholder="Describe the project"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="environmentImpact" class="form-label">Environmental Impact</label>
+                        <textarea class="form-control" id="environmentImpact" rows="3" placeholder="Explain the project's environmental impact"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="socialImpact" class="form-label">Social Impact</label>
+                        <textarea class="form-control" id="socialImpact" rows="3" placeholder="Explain the project's social impact"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="governanceCompliance" class="form-label">Governance Compliance</label>
+                        <textarea class="form-control" id="governanceCompliance" rows="3" placeholder="Describe governance compliance measures"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Assess Project</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="esg-evaluation" class="esg-evaluation section">
+            <div class="container">
+                <h3>ESG Evaluation Results</h3>
+                <p>Once a project is assessed, the ESG evaluation results will be displayed here.</p>
+                <div id="esgResults" class="esg-results">
+                    <p><strong>Environmental Score:</strong> Pending</p>
+                    <p><strong>Social Score:</strong> Pending</p>
+                    <p><strong>Governance Score:</strong> Pending</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment-insights" class="assessment-insights section">
+            <div class="container">
+                <h3>Why ESG Matters</h3>
+                <p>ESG criteria help evaluate the ethical and sustainable impact of an investment. By focusing on these principles, investors can ensure that their contributions support responsible and impactful projects.</p>
+                <ul>
+                    <li><strong>Environmental:</strong> Measures the project's impact on nature, including carbon footprint and resource usage.</li>
+                    <li><strong>Social:</strong> Evaluates the project's impact on communities, labor practices, and inclusivity.</li>
+                    <li><strong>Governance:</strong> Assesses the project's adherence to laws, ethical standards, and decision-making processes.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© 2024 <strong class="sitename">Leafting</strong>. All Rights Reserved.</p>
+            </div>
+            <div class="social-links d-flex justify-content-center">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('fundingChart').getContext('2d');
+            const fundingChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Residential', 'Commercial', 'Industrial', 'Green Spaces', 'Mixed-use'],
+                    datasets: [{
+                        label: 'Funds in USD (millions)',
+                        data: [45, 30, 15, 10, 25],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(231, 111, 81, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(231, 111, 81, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Funding Distribution Across Project Types'
+                        }
+                    }
+                }
+            });
+        </script>
+</body>
+
+</html>
